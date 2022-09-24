@@ -11,7 +11,7 @@ RSpec.describe 'User CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
 
       created_user = User.last 
 
@@ -32,7 +32,7 @@ RSpec.describe 'User CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
 
       expect(response).to have_http_status(422)
       expect(response.body).to include("Password confirmation doesn't match Password")
@@ -48,11 +48,11 @@ RSpec.describe 'User CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
       
       # create User w same email 
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
 
       expect(response).to have_http_status(422)
       expect(response.body).to include("Validation failed: Email has already been taken")
@@ -68,11 +68,11 @@ RSpec.describe 'User CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
       
       # create User w same email 
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
 
       expect(response).to have_http_status(422)
       expect(response.body).to include("Validation failed: Password can't be blank")
