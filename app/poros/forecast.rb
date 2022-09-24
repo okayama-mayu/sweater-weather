@@ -2,12 +2,12 @@ class Forecast
   attr_reader :current_weather, :daily_weather, :hourly_weather
 
   def initialize(data)
-    @current_weather = current_weather(data)
-    @daily_weather = daily_weather(data)
-    binding.pry 
+    @current_weather = current(data)
+    @daily_weather = daily(data)
+    @hourly_weather = hourly(data)
   end
 
-  def current_weather(data)
+  def current(data)
     {
       datetime: Time.at(data[:current][:dt]), 
       sunrise: Time.at(data[:current][:sunrise]),
@@ -22,7 +22,7 @@ class Forecast
     }
   end
 
-  def daily_weather(data)
+  def daily(data)
     data[:daily].take(5).map do |day| 
       {
         date: Time.at(day[:dt]).strftime("%Y-%m-%e"), 
@@ -31,7 +31,18 @@ class Forecast
         max_temp: day[:temp][:max], 
         min_temp: day[:temp][:min], 
         conditions: day[:weather][0][:description], 
-        icons: day[:weather][0][:icon] 
+        icon: day[:weather][0][:icon] 
+      }
+    end
+  end
+
+  def hourly(data)
+    data[:hourly].take(8).map do |hour| 
+      {
+        time: Time.at(hour[:dt]).strftime("%H:%M:%S"),
+        temperature: hour[:temp],
+        conditions: hour[:weather][0][:description],
+        icon: hour[:weather][0][:icon] 
       }
     end
   end
