@@ -33,5 +33,20 @@ RSpec.describe 'Session CRUD' do
       expect(response.body).to include(user.password_digest)
       expect(user.email).to eq "whatever@example.com"
     end
+
+    it 'returns an error if the password is incorrect' do 
+      session_params = ({
+        "email": "whatever@example.com", 
+        "password": "hehe" 
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json", "Accept" => "application/json"}
+
+      post "/api/v1/sessions", headers: headers, params: JSON.generate(session_params)
+
+      expect(response).to have_http_status(401)
+
+      expect(response.body).to include("Your credentials are invalid") 
+    end
   end
 end

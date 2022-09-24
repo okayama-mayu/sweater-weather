@@ -4,7 +4,7 @@ class Api::V1::SessionsController < ApplicationController
     if user&.authenticate(params[:password])
       user_json_response(user)
     else 
-      
+      error_response('Your credentials are invalid', 401)
     end
   end
 end
