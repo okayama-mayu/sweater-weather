@@ -1,8 +1,7 @@
 class Api::V1::UsersController < ApplicationController 
   def create
     new_user = User.create!(user_params)
-    test = user_json_response(new_user)
-    binding.pry 
+    user_json_response(new_user, 201)
   end
 
   private 

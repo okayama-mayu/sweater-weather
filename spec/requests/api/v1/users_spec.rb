@@ -17,11 +17,10 @@ RSpec.describe 'User CRUD' do
 
       expect(response).to be_successful 
       expect(response).to have_http_status(201)
-      expect(response.body).to have_key(:data)
-      expect(response.body[:data][:type]).to eq 'users' 
-      expect(response.body[:data][:id]).to eq created_user.id 
-      expect(response.body[:data][:id][:attributes][:email]).to eq "whatever@example.com"
-      expect(response.body[:data][:id][:attributes][:api_key]).to eq created_user.password_digest
+      
+      expect(response.body).to include("whatever@example.com")
+      expect(response.body).to include(created_user.password_digest)
+      expect(created_user.email).to eq user_params[:email]
     end
   end
 end
