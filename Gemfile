@@ -40,7 +40,7 @@ group :development, :test do
 
 end
 
-group :development do
+group :test do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rspec-rails'
   gem 'simplecov'
