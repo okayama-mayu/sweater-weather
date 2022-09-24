@@ -1,7 +1,7 @@
 require 'rails_helper' 
 
 RSpec.describe 'Weather GET call' do 
-  it 'can retrieve weather for a city' do 
+  it 'can retrieve weather for a city', :vcr do 
     headers = { "CONTENT_TYPE" => "application/json" }
     location_param = ( { location: "denver, co" })
 
@@ -17,8 +17,8 @@ RSpec.describe 'Weather GET call' do
     expect(forecast[:type]).to eq 'forecast' 
     expect(forecast[:attributes]).to include(:current_weather, :daily_weather, :hourly_weather)
     expect(forecast[:attributes][:current_weather]).to include(:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon)
-    expect(forecast[:attributes][:daily_weather]).to include(:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon)
-    expect(forecast[:attributes][:hourly_weather]).to include(:time, :temperature, :conditions, :icon)
+    expect(forecast[:attributes][:daily_weather][0]).to include(:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon)
+    expect(forecast[:attributes][:hourly_weather][0]).to include(:time, :temperature, :conditions, :icon)
     expect(forecast[:attributes]).to_not include(:alerts, :minutely_weather)
   end
 end
