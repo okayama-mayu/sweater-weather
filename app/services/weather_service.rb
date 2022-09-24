@@ -1,6 +1,6 @@
 class WeatherService 
   def self.search_coordinates(lat, lng)
-    response = conn.get("/data/2.5/onecall?lat=#{lat}&lon=#{lng}&exclude=minutely,alerts")
+    response = conn.get("/data/2.5/onecall?lat=#{lat}&lon=#{lng}&exclude=minutely,alerts&units=imperial")
     response_check(response)
   end
 

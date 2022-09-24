@@ -21,14 +21,14 @@ RSpec.describe Forecast do
     expect(forecast.current_weather[:conditions]).to eq "clear sky"
     expect(forecast.current_weather[:icon]).to eq "01n"
 
-    expect(forecast[:daily_weather].count).to eq 5
-    expect(forecast[:daily_weather][0][:date]).to eq Time.at(1663956000).strftime("%Y-%m-%e")
-    expect(forecast[:daily_weather][0][:sunrise]).to eq Time.at(1663934697)
-    expect(forecast[:daily_weather][0][:sunset]).to eq Time.at(1663978326)
-    expect(forecast[:daily_weather][0][:max_temp]).to eq 304.17
-    expect(forecast[:daily_weather][0][:min_temp]).to eq 289.97
-    expect(forecast[:daily_weather][0][:conditions]).to eq "clear sky"
-    expect(forecast[:daily_weather][0][:icons]).to eq "01d"
+    expect(forecast.daily_weather.count).to eq 5
+    expect(forecast.daily_weather[0][:date]).to eq Time.at(1663956000).strftime("%Y-%m-%e")
+    expect(forecast.daily_weather[0][:sunrise]).to eq Time.at(1663934697)
+    expect(forecast.daily_weather[0][:sunset]).to eq Time.at(1663978326)
+    expect(forecast.daily_weather[0][:max_temp]).to eq 304.17
+    expect(forecast.daily_weather[0][:min_temp]).to eq 289.97
+    expect(forecast.daily_weather[0][:conditions]).to eq "clear sky"
+    expect(forecast.daily_weather[0][:icon]).to eq "01d"
 
     expect(forecast[:hourly_weather].count).to eq 5 
     expect(forecast[:hourly_weather][0][:time]).to eq Time.at(1663984800).strftime("%I:%M:%S")

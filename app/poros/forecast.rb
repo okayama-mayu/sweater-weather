@@ -3,6 +3,7 @@ class Forecast
 
   def initialize(data)
     @current_weather = current_weather(data)
+    @daily_weather = daily_weather(data)
     binding.pry 
   end
 
@@ -19,5 +20,19 @@ class Forecast
       conditions: data[:current][:weather][0][:description],
       icon: data[:current][:weather][0][:icon]
     }
+  end
+
+  def daily_weather(data)
+    data[:daily].take(5).map do |day| 
+      {
+        date: Time.at(day[:dt]).strftime("%Y-%m-%e"), 
+        sunrise: Time.at(day[:sunrise]), 
+        sunset: Time.at(day[:sunset]), 
+        max_temp: day[:temp][:max], 
+        min_temp: day[:temp][:min], 
+        conditions: day[:weather][0][:description], 
+        icons: day[:weather][0][:icon] 
+      }
+    end
   end
 end
