@@ -10,9 +10,7 @@ RSpec.describe 'Session CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      # binding.pry 
-
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
   end
   
   describe 'Session Create' do 
@@ -24,8 +22,16 @@ RSpec.describe 'Session CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json", "Accept" => "application/json"}
 
-      post "/api/v1/sessions", headers: headers, params: JSON.generate(user: user_params)
-      
+      post "/api/v1/sessions", headers: headers, params: JSON.generate(session_params)
+
+      user = User.find_by!(email: session_params[:email])
+
+      expect(response).to be_successful 
+      expect(response).to have_http_status(201)
+
+      expect(response.body).to include("whatever@example.com")
+      expect(response.body).to include(created_user.password_digest)
+      expect(user.email).to eq "whatever@example.com"
     end
   end
 end
