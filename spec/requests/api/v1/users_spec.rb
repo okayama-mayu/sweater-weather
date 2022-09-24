@@ -55,7 +55,7 @@ RSpec.describe 'User CRUD' do
       post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
 
       expect(response).to have_http_status(422)
-      expect(response.body).to include("Email taken")
+      expect(response.body).to include("Validation failed: Email has already been taken")
     end
   end
 end
