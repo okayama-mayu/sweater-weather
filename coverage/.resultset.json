@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/location_service.rb": {
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/weather_service.rb": {
         "lines": [
           1,
           1,
@@ -35,7 +35,9 @@
         "lines": [
           0,
           0,
-          null,
+          0,
+          0,
+          0,
           0,
           0
         ],
@@ -75,8 +77,31 @@
         ],
         "branches": {
         }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/location_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1663982795
+    "timestamp": 1663988951
   }
 }
