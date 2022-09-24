@@ -57,5 +57,25 @@ RSpec.describe 'User CRUD' do
       expect(response).to have_http_status(422)
       expect(response.body).to include("Validation failed: Email has already been taken")
     end
+
+    it 'returns an error if field is missing' do 
+      # create User 
+      user_params = ({
+        "email": "whatever@example.com",
+        "password": "",
+        "password_confirmation": "password"
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      
+      # create User w same email 
+
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+
+      expect(response).to have_http_status(422)
+      expect(response.body).to include("Validation failed: Password can't be blank")
+    end
   end
 end
