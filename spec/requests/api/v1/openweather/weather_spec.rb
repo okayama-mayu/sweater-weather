@@ -21,4 +21,15 @@ RSpec.describe 'Weather GET call' do
     expect(forecast[:attributes][:hourly_weather][0]).to include(:time, :temperature, :conditions, :icon)
     expect(forecast[:attributes]).to_not include(:alerts, :minutely_weather)
   end
+
+  # it 'returns an error if city is not found', :vcr do 
+  #   headers = { "CONTENT_TYPE" => "application/json" }
+  #   location_param = ( { location: "" })
+
+  #   get "/api/v1/weathers", headers: headers, params: location_param
+
+  #   binding.pry 
+  #   expect(response).to have_http_status(404)
+  #   expect(response.body).to include "The city could not be found"
+  # end
 end
