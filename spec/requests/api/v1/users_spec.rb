@@ -24,7 +24,7 @@ RSpec.describe 'User CRUD' do
     end
 
     it 'returns an error if an unsuccessful POST request is made' do 
-      ser_params = ({
+      user_params = ({
         "email": "whatever@example.com",
         "password": "password",
         "password_confirmation": "hehe"
@@ -35,7 +35,7 @@ RSpec.describe 'User CRUD' do
       post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
 
       expect(response).to have_http_status(422)
-      expect(response.body).to include("Passwords must match.")
+      expect(response.body).to include("Password confirmation doesn't match Password")
     end
   end
 end
