@@ -77,3 +77,10 @@ VCR.configure do |config|
     :match_requests_on => [:method, :host, :path]
   }
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
