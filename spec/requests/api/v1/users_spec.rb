@@ -1,7 +1,7 @@
 require 'rails_helper' 
 
 RSpec.describe 'User CRUD' do 
-  describe 'User Create' do 
+  describe 'User Create/POST' do 
     it 'creates a User and returns a serialized response with email and api_key' do 
       user_params = ({
         "email": "whatever@example.com",
@@ -17,10 +17,25 @@ RSpec.describe 'User CRUD' do
 
       expect(response).to be_successful 
       expect(response).to have_http_status(201)
-      
+
       expect(response.body).to include("whatever@example.com")
       expect(response.body).to include(created_user.password_digest)
       expect(created_user.email).to eq user_params[:email]
+    end
+
+    it 'returns an error if an unsuccessful POST request is made' do 
+      ser_params = ({
+        "email": "whatever@example.com",
+        "password": "password",
+        "password_confirmation": "hehe"
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+
+      expect(response).to have_http_status(422)
+      expect(response.body).to include("Passwords must match.")
     end
   end
 end
