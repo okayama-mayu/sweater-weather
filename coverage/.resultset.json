@@ -1,10 +1,28 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/weather.rb": {
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/forecast.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -114,6 +132,6 @@
         }
       }
     },
-    "timestamp": 1663990913
+    "timestamp": 1663993197
   }
 }
