@@ -10,6 +10,8 @@ RSpec.describe Forecast do
 
     expect(forecast).to be_a Forecast 
 
+    expect(forecast.id).to eq nil 
+
     expect(forecast.current_weather[:datetime]).to eq Time.at(1663993917) # unix time; UTC = Time.at(unix)
     expect(forecast.current_weather[:sunrise]).to eq Time.at(1663934697)
     expect(forecast.current_weather[:sunset]).to eq Time.at(1663978326)
