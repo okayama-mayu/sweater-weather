@@ -23,7 +23,7 @@ RSpec.describe 'User CRUD' do
       expect(created_user.email).to eq user_params[:email]
     end
 
-    it 'returns an error if an unsuccessful POST request is made' do 
+    it 'returns an error if passwords do not match' do 
       user_params = ({
         "email": "whatever@example.com",
         "password": "password",
@@ -36,6 +36,26 @@ RSpec.describe 'User CRUD' do
 
       expect(response).to have_http_status(422)
       expect(response.body).to include("Password confirmation doesn't match Password")
+    end
+
+    it 'returns an error if email has already been taken' do 
+      # create User 
+      user_params = ({
+        "email": "whatever@example.com",
+        "password": "password",
+        "password_confirmation": "password"
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+      
+      # create User w same email 
+
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
+
+      expect(response).to have_http_status(422)
+      expect(response.body).to include("Email taken")
     end
   end
 end
