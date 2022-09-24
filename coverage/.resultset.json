@@ -1,23 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/weather_service.rb": {
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/weather.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
           null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
           null,
           null
         ]
@@ -33,6 +21,7 @@
       },
       "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/facades/weather_search_facade.rb": {
         "lines": [
+          0,
           0,
           0,
           0,
@@ -100,8 +89,31 @@
         ],
         "branches": {
         }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/weather_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1663988951
+    "timestamp": 1663990913
   }
 }
