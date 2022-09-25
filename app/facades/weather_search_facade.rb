@@ -5,4 +5,11 @@ class WeatherSearchFacade
     weather_data = WeatherService.search_coordinates(coordinates.lat, coordinates.lng)
     forecast = Forecast.new(weather_data)
   end
+
+  def self.road_trip_search(origin, destination)
+    weather_data = weather_search(destination)
+    time_data = LocationService.search_directions(origin, destination)
+
+    Roadtrip.new(origin, destination, weather_data, time_data)
+  end
 end

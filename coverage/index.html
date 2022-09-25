@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-09-24T17:53:22-05:00">2022-09-24T17:53:22-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-09-24T20:24:52-05:00">2022-09-24T20:24:52-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -73,7 +73,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#1cc7a5070c5807a641e8ec74a30296fc033bb26f" class="src_link" title="app/controllers/api/v1/road_trip_controller.rb">app/controllers/api/v1/road_trip_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
@@ -150,7 +150,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#09633966dbbcff278b87c041605ce37a5cbd6714" class="src_link" title="app/facades/weather_search_facade.rb">app/facades/weather_search_facade.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">15</td>
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
@@ -286,7 +286,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#1cc7a5070c5807a641e8ec74a30296fc033bb26f" class="src_link" title="app/controllers/api/v1/road_trip_controller.rb">app/controllers/api/v1/road_trip_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
@@ -791,7 +791,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#09633966dbbcff278b87c041605ce37a5cbd6714" class="src_link" title="app/facades/weather_search_facade.rb">app/facades/weather_search_facade.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">15</td>
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
@@ -914,7 +914,7 @@
 
             
 
-            <code class="ruby">    binding.pry </code>
+            <code class="ruby">    if User.exists?(password_digest: params[:api_key])</code>
           </li>
         </div>
       
@@ -925,12 +925,56 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      data = WeatherSearchFacade.road_trip_search(params[:origin], params[:destination])</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">      json_response(data)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">    else </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    end </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -1984,6 +2028,83 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  def self.road_trip_search(origin, destination)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">    weather_data = weather_search(destination)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">    time_data = LocationService.search_directions(origin, destination)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">    Roadtrip.new(origin, destination, weather_data, time_data)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
