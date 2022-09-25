@@ -1,12 +1,20 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/roadtrip.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/location_service.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           1,
@@ -16,8 +24,8 @@
           null,
           1,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           null,
@@ -28,7 +36,7 @@
           null,
           null,
           1,
-          2,
+          1,
           null,
           null
         ]
@@ -293,6 +301,6 @@
         }
       }
     },
-    "timestamp": 1664071239
+    "timestamp": 1664075526
   }
 }

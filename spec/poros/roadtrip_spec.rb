@@ -1,7 +1,7 @@
 require 'rails_helper' 
 
 RSpec.describe Roadtrip do 
-  it 'exists and has origin, destination, travel time, temperature, and weather conditions' do 
+  it 'exists and has origin, destination, travel time, temperature, and weather conditions', :vcr do 
     origin = 'Houston, TX'
     destination = 'New Orleans, LA'
 
@@ -11,7 +11,14 @@ RSpec.describe Roadtrip do
     time_data = LocationService.search_directions(origin, destination)
     time_lapsed = time_data[:route][:time]
 
-    binding.pry 
-    roadtrip = Roadtrip.new(origin, destination, weather_data)
+    roadtrip = Roadtrip.new(origin, destination, weather_data, time_lapsed)
+
+    expect(roadtrip).to be_a Roadtrip
+    expect(roadtrip.id).to eq nil 
+    expect(roadtrip.start_city).to eq origin 
+    expect(roadtrip.end_city).to eq destination
+    expect(roadtrip.travel_time).to eq '5 hours 21 minutes 26 seconds'
+    expect(roadtrip.weather_at_eta).to be_a Hash
+    expect(roadtrip.weather_at_eta[:temperature]).to eq 
   end
 end
