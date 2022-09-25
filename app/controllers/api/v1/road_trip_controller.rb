@@ -6,4 +6,9 @@ class Api::V1::RoadTripController < ApplicationController
     else 
     end 
   end
+
+  private 
+    def json_response(object, status = :ok)
+      render json: RoadtripSerializer.new(object), status: status 
+    end
 end
