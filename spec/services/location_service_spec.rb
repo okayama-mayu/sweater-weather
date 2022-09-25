@@ -13,13 +13,13 @@ RSpec.describe LocationService do
     expect(location[:results][0][:locations][0][:latLng][:lng]).to be_a Float
   end
 
-  it 'can return the time it takes to travel between two points' :vcr do 
+  it 'can return the time it takes to travel between two points', :vcr do 
     directions = LocationService.search_directions('denver, co', 'estes park, co')
 
     expect(directions).to be_a Hash
     expect(directions).to have_key(:route)
 
-    expect(location[:route]).to have_key(:time)
-    expect(location[:route][:time]).to be_an Integer 
+    expect(directions[:route]).to have_key(:time)
+    expect(directions[:route][:time]).to be_an Integer 
   end
 end
