@@ -116,8 +116,18 @@ RSpec.describe 'Roadtrip CRUD' do
       expect(response.body).to include('{}')
     end
 
-    it 'returns an error if no api key'
+    it 'returns an error if no api key', :vcr do 
+      body = ({
+        "origin": "Denver, CO", 
+        "destination": "Pueblo, CO"
+      })
 
+      headers = {"CONTENT_TYPE" => "application/json"}
 
+      post "/api/v1/road_trip", headers: headers, params: JSON.generate(body)
+
+      expect(response).to have_http_status(401)
+      expect(response.body).to include("Missing API key")
+    end
   end
 end
