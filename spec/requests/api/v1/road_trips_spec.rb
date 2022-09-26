@@ -125,9 +125,9 @@ RSpec.describe 'Roadtrip CRUD' do
       headers = {"CONTENT_TYPE" => "application/json"}
 
       post "/api/v1/road_trip", headers: headers, params: JSON.generate(body)
-
+      
       expect(response).to have_http_status(401)
-      expect(response.body).to include("Missing API key")
+      expect(response.body).to include('API key must be submitted as part of the request')
     end
   end
 end
