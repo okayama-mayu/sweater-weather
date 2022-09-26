@@ -91,6 +91,30 @@ RSpec.describe 'Roadtrip CRUD' do
       expect(response.body).to include('conditions')
     end
 
+    it 'returns an empty weather block and travel time of impossible if travelling from NYC to London', :vcr do 
+      api_key = User.find_by!(email: "whatever@example.com").api_key
+
+      body = ({
+        "origin": "New York, NY", 
+        "destination": "London, UK", 
+        "api_key": api_key
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      post "/api/v1/road_trip", headers: headers, params: JSON.generate(body)
+
+      expect(response).to be_successful
+      expect(response).to have_http_status(200)
+
+      expect(response.body).to include('roadtrip')
+      expect(response.body).to include('New York, NY')
+      expect(response.body).to include('London, UK')
+      expect(response.body).to include('travel_time')
+      expect(response.body).to include('impossible')
+      expect(response.body).to include('weather_at_eta')
+      expect(response.body).to include('{}')
+    end
 
     it 'returns an error if no api key'
 

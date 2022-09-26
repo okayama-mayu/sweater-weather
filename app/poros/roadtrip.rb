@@ -10,15 +10,23 @@ class Roadtrip
   end
 
   def find_time_lapsed(time_lapsed)
+    if time_lapsed 
     "%02d hours %02d minutes" % [time_lapsed / 3600, time_lapsed / 60 % 60]
+    else
+      'impossible'
+    end 
   end
 
   def find_weather(weather_data, time_lapsed) 
-    eta = find_eta(weather_data, time_lapsed)
+    if time_lapsed
+      eta = find_eta(weather_data, time_lapsed)
 
-    data = pull_data(weather_data, eta, time_lapsed)
+      data = pull_data(weather_data, eta, time_lapsed)
 
-    create_hash(data, time_lapsed)
+      create_hash(data, time_lapsed)
+    else 
+      {}
+    end
   end
 
   def find_eta(weather_data, time_lapsed)
