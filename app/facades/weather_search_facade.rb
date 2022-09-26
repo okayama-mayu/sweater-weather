@@ -3,7 +3,7 @@ class WeatherSearchFacade
     # location_data = LocationService.search_location(location)
     # coordinates = Location.new(location_data)
     # weather_data = WeatherService.search_coordinates(coordinates.lat, coordinates.lng)
-    weather_data_raw(location)
+    weather_data = weather_data_raw(location)
     forecast = Forecast.new(weather_data)
   end
 
@@ -24,5 +24,7 @@ class WeatherSearchFacade
   def self.book_search(location, quantity)
     weather_data = weather_search(location).current_weather
     books_data = BookService.search_books(location, quantity)
+
+    Book.new(location, weather_data, books_data)
   end
 end

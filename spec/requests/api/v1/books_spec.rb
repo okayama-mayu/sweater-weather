@@ -29,7 +29,7 @@ RSpec.describe 'Book CRUD' do
       expect(books[:attributes][:forecast][:summary]).to be_a String
       expect(books[:attributes][:forecast][:temperature]).to be_a String
 
-      expect(books[:attributes][:total_books_cound]).to be_an Integer
+      expect(books[:attributes][:total_books_]).to be_an Integer
 
       expect(books[:books].count).to eq 5 
 
