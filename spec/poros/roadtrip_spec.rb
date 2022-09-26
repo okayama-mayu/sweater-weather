@@ -17,8 +17,8 @@ RSpec.describe Roadtrip do
     expect(roadtrip.id).to eq nil 
     expect(roadtrip.start_city).to eq origin 
     expect(roadtrip.end_city).to eq destination
-    expect(roadtrip.travel_time).to eq '05 hours 21 minutes 26 seconds'
+    expect(roadtrip.travel_time).to eq '05 hours 21 minutes'
     expect(roadtrip.weather_at_eta).to be_a Hash
-    expect(roadtrip.weather_at_eta[:temperature]).to eq 82.81
+    expect(roadtrip.weather_at_eta[:temperature]).to eq 76.75
   end
 end

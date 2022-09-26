@@ -10,22 +10,28 @@ class Roadtrip
   end
 
   def find_time_lapsed(time_lapsed)
-    Time.at(time_lapsed).utc.strftime("%H hours %M minutes %S seconds")
+    "%02d hours %02d minutes" % [time_lapsed / 3600, time_lapsed / 60 % 60]
   end
 
   def find_weather(weather_data, time_lapsed) 
     eta = find_eta(weather_data, time_lapsed)
 
-    data = weather_data[:hourly].find { |hour| hour[:dt]== eta }
+    data = weather_data[:hourly].find { |hour| hour[:dt] == eta }
+
     {
-      temperature: data[:temp], 
-      conditions: data[:weather][0][:description]
+      :temperature => data[:temp], 
+      :conditions => data[:weather][0][:description]
     }
   end
 
   def find_eta(weather_data, time_lapsed)
     current_unix_time = weather_data[:current][:dt]
-    times = weather_data[:hourly].map { |hour| hour[:dt]}
-    times.min_by { |time| (current_unix_time - time).abs }
+    if time_lapsed <= 172800 
+      times = weather_data[:hourly].map { |hour| hour[:dt] }
+      times.min_by { |time| (current_unix_time + time_lapsed - time).abs }
+    else 
+      times = weather_data[:daily].map { |day| day[:dt] }
+      binding.pry 
+    end 
   end
 end
