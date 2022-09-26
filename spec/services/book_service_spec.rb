@@ -9,11 +9,14 @@ RSpec.describe 'BookService' do
     expect(books).to include(:numFound)
     expect(books[:docs]).to be_an Array 
     expect(books[:docs].count).to eq 3 
-    expect(books[:docs].first).to include(:isbn, :title, :publisher)
-    expect(books[:docs].first[:isbn]).to be_an Array 
-    expect(books[:docs].first[:isbn][0]).to be_a String 
-    expect(books[:docs].first[:title]).to be_a String 
-    expect(books[:docs].first[:publisher]).to be_an Array 
-    expect(books[:docs].first[:publisher][0]).to be_a String 
+
+    books[:docs].each do |book| 
+      expect(book).to include(:isbn, :title, :publisher)
+      expect(book[:isbn]).to be_an Array 
+      expect(book[:isbn][0]).to be_a String 
+      expect(book[:title]).to be_a String 
+      expect(book[:publisher]).to be_an Array 
+      expect(book[:publisher][0]).to be_a String
+    end 
   end
 end
