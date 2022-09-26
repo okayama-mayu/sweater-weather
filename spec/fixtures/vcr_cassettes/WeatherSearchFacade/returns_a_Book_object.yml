@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=mapquest_key&location=Denver,%20CO
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=mapquest_key&location=denver,%20co
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 26 Sep 2022 16:24:23 GMT
+      - Mon, 26 Sep 2022 16:23:38 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1736'
+      - '1734'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 26 Sep 2022 16:24:23 GMT
+      - Mon, 26 Sep 2022 16:23:38 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=60C2B68C37F3ECB15644218ECDA90F1C; Path=/; HttpOnly
+      - JSESSIONID=A1A9F346B95C6E011C7F404F53727E01; Path=/; HttpOnly
       Status:
       - success
       - success
@@ -51,11 +51,11 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Denver,
-        CO"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_key&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1765159144"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_key&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-675894296"}]}]}'
-  recorded_at: Mon, 26 Sep 2022 16:24:23 GMT
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,
+        co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_key&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=149550213"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_key&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=1465848807"}]}]}'
+  recorded_at: Mon, 26 Sep 2022 16:23:38 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=weather_key&exclude=minutely,alerts&lat=39.738453&lon=-104.984853&units=imperial
@@ -77,11 +77,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 26 Sep 2022 16:24:24 GMT
+      - Mon, 26 Sep 2022 16:23:39 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '17485'
+      - '17488'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -94,12 +94,12 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1664209464,"sunrise":1664196679,"sunset":1664239866,"temp":71.29,"feels_like":69.82,"pressure":1023,"humidity":36,"dew_point":43,"uvi":2.63,"clouds":0,"visibility":10000,"wind_speed":1.99,"wind_deg":132,"wind_gust":3,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}]},"hourly":[{"dt":1664208000,"temp":71.29,"feels_like":69.82,"pressure":1023,"humidity":36,"dew_point":43,"uvi":2.63,"clouds":0,"visibility":10000,"wind_speed":3.27,"wind_deg":199,"wind_gust":3.98,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1664211600,"temp":71.87,"feels_like":70.27,"pressure":1022,"humidity":32,"dew_point":40.46,"uvi":4.41,"clouds":0,"visibility":10000,"wind_speed":2.04,"wind_deg":116,"wind_gust":2.37,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1664215200,"temp":73.53,"feels_like":71.89,"pressure":1021,"humidity":28,"dew_point":38.46,"uvi":5.86,"clouds":0,"visibility":10000,"wind_speed":5.23,"wind_deg":75,"wind_gust":7.72,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1664218800,"temp":76.03,"feels_like":74.46,"pressure":1019,"humidity":24,"dew_point":36.68,"uvi":6.46,"clouds":0,"visibility":10000,"wind_speed":5.73,"wind_deg":70,"wind_gust":6.24,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1664222400,"temp":79.05,"feels_like":79.05,"pressure":1017,"humidity":18,"dew_point":31.98,"uvi":5.89,"clouds":0,"visibility":10000,"wind_speed":4.7,"wind_deg":71,"wind_gust":3.91,"weather":[{"id":800,"main":"Clear","description":"clear
+      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1664209384,"sunrise":1664196679,"sunset":1664239866,"temp":71.2,"feels_like":69.71,"pressure":1023,"humidity":36,"dew_point":42.93,"uvi":2.63,"clouds":0,"visibility":10000,"wind_speed":1.99,"wind_deg":132,"wind_gust":3,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}]},"hourly":[{"dt":1664208000,"temp":71.2,"feels_like":69.71,"pressure":1023,"humidity":36,"dew_point":42.93,"uvi":2.63,"clouds":0,"visibility":10000,"wind_speed":3.27,"wind_deg":199,"wind_gust":3.98,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664211600,"temp":71.8,"feels_like":70.18,"pressure":1022,"humidity":32,"dew_point":40.39,"uvi":4.41,"clouds":0,"visibility":10000,"wind_speed":2.04,"wind_deg":116,"wind_gust":2.37,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664215200,"temp":73.47,"feels_like":71.83,"pressure":1021,"humidity":28,"dew_point":38.41,"uvi":5.86,"clouds":0,"visibility":10000,"wind_speed":5.23,"wind_deg":75,"wind_gust":7.72,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664218800,"temp":75.99,"feels_like":74.43,"pressure":1019,"humidity":24,"dew_point":36.64,"uvi":6.46,"clouds":0,"visibility":10000,"wind_speed":5.73,"wind_deg":70,"wind_gust":6.24,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664222400,"temp":79.03,"feels_like":79.03,"pressure":1017,"humidity":18,"dew_point":31.96,"uvi":5.89,"clouds":0,"visibility":10000,"wind_speed":4.7,"wind_deg":71,"wind_gust":3.91,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"pop":0},{"dt":1664226000,"temp":82.02,"feels_like":79.68,"pressure":1016,"humidity":14,"dew_point":27.61,"uvi":4.44,"clouds":0,"visibility":10000,"wind_speed":4.65,"wind_deg":72,"wind_gust":4.14,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"pop":0},{"dt":1664229600,"temp":82.13,"feels_like":79.75,"pressure":1015,"humidity":14,"dew_point":28,"uvi":2.67,"clouds":0,"visibility":10000,"wind_speed":5.68,"wind_deg":68,"wind_gust":4.52,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"pop":0},{"dt":1664233200,"temp":81.54,"feels_like":79.34,"pressure":1014,"humidity":14,"dew_point":28.45,"uvi":1.15,"clouds":0,"visibility":10000,"wind_speed":6.87,"wind_deg":68,"wind_gust":4.79,"weather":[{"id":800,"main":"Clear","description":"clear
@@ -143,7 +143,7 @@ http_interactions:
         clouds","icon":"02n"}],"pop":0},{"dt":1664370000,"temp":60.84,"feels_like":58.69,"pressure":1021,"humidity":44,"dew_point":38.73,"uvi":0,"clouds":7,"visibility":10000,"wind_speed":3.4,"wind_deg":205,"wind_gust":3.85,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"pop":0},{"dt":1664373600,"temp":62.91,"feels_like":60.78,"pressure":1021,"humidity":40,"dew_point":37.96,"uvi":0.26,"clouds":8,"visibility":10000,"wind_speed":3.44,"wind_deg":203,"wind_gust":4.74,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"pop":0},{"dt":1664377200,"temp":67.01,"feels_like":64.96,"pressure":1020,"humidity":33,"dew_point":36.86,"uvi":1.06,"clouds":8,"visibility":10000,"wind_speed":3.06,"wind_deg":199,"wind_gust":4.18,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0}],"daily":[{"dt":1664215200,"sunrise":1664196679,"sunset":1664239866,"moonrise":1664199120,"moonset":1664242140,"moon_phase":0.03,"temp":{"day":73.53,"min":60.78,"max":82.13,"night":69.48,"eve":80.08,"morn":62.33},"feels_like":{"day":71.89,"night":67.3,"eve":78.44,"morn":59.95},"pressure":1021,"humidity":28,"dew_point":38.46,"wind_speed":7.14,"wind_deg":75,"wind_gust":11.68,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0}],"daily":[{"dt":1664215200,"sunrise":1664196679,"sunset":1664239866,"moonrise":1664199120,"moonset":1664242140,"moon_phase":0.03,"temp":{"day":73.47,"min":60.78,"max":82.13,"night":69.48,"eve":80.08,"morn":62.31},"feels_like":{"day":71.83,"night":67.3,"eve":78.44,"morn":59.94},"pressure":1021,"humidity":28,"dew_point":38.41,"wind_speed":7.14,"wind_deg":75,"wind_gust":11.68,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":6.46},{"dt":1664301600,"sunrise":1664283136,"sunset":1664326167,"moonrise":1664289480,"moonset":1664330040,"moon_phase":0.06,"temp":{"day":76.35,"min":62.37,"max":78.6,"night":65.61,"eve":70.63,"morn":62.89},"feels_like":{"day":74.59,"night":63.99,"eve":69.08,"morn":60.33},"pressure":1018,"humidity":19,"dew_point":30.85,"wind_speed":14.65,"wind_deg":239,"wind_gust":23.26,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}],"clouds":81,"pop":0.44,"uvi":5.94},{"dt":1664388000,"sunrise":1664369593,"sunset":1664412468,"moonrise":1664380080,"moonset":1664418120,"moon_phase":0.1,"temp":{"day":79.05,"min":60.84,"max":84.65,"night":69.75,"eve":80.55,"morn":61.38},"feels_like":{"day":79.05,"night":67.93,"eve":78.87,"morn":59.29},"pressure":1018,"humidity":20,"dew_point":33.98,"wind_speed":16.2,"wind_deg":175,"wind_gust":23.38,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"clouds":6,"pop":0.09,"uvi":6.19},{"dt":1664474400,"sunrise":1664456049,"sunset":1664498770,"moonrise":1664470800,"moonset":1664506500,"moon_phase":0.13,"temp":{"day":81.61,"min":64.65,"max":84.33,"night":69.89,"eve":75.2,"morn":64.65},"feels_like":{"day":79.52,"night":68.56,"eve":73.78,"morn":62.56},"pressure":1014,"humidity":18,"dew_point":33.76,"wind_speed":8.14,"wind_deg":26,"wind_gust":9.95,"weather":[{"id":500,"main":"Rain","description":"light
@@ -152,10 +152,10 @@ http_interactions:
         rain","icon":"10d"}],"clouds":100,"pop":1,"rain":16.86,"uvi":6},{"dt":1664733600,"sunrise":1664715422,"sunset":1664757677,"moonrise":1664742660,"moonset":1664774880,"moon_phase":0.25,"temp":{"day":58.57,"min":50,"max":62.83,"night":55.24,"eve":59.88,"morn":50.02},"feels_like":{"day":56.8,"night":53.89,"eve":58.1,"morn":48.61},"pressure":1018,"humidity":57,"dew_point":42.96,"wind_speed":9.44,"wind_deg":358,"wind_gust":12.28,"weather":[{"id":501,"main":"Rain","description":"moderate
         rain","icon":"10d"}],"clouds":54,"pop":1,"rain":14.66,"uvi":6},{"dt":1664820000,"sunrise":1664801880,"sunset":1664843980,"moonrise":1664832480,"moonset":0,"moon_phase":0.28,"temp":{"day":59.36,"min":51.44,"max":63.95,"night":58.86,"eve":62.24,"morn":51.46},"feels_like":{"day":57.16,"night":56.55,"eve":59.95,"morn":50.07},"pressure":1021,"humidity":46,"dew_point":38.64,"wind_speed":7.47,"wind_deg":52,"wind_gust":8.08,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":59,"pop":1,"rain":3.15,"uvi":6}]}'
-  recorded_at: Mon, 26 Sep 2022 16:24:24 GMT
+  recorded_at: Mon, 26 Sep 2022 16:23:39 GMT
 - request:
     method: get
-    uri: https://openlibrary.org/search.json?limit=5&q=Denver,%20CO
+    uri: https://openlibrary.org/search.json?limit=8&q=denver,%20co
     body:
       encoding: US-ASCII
       string: ''
@@ -174,7 +174,7 @@ http_interactions:
       Server:
       - nginx/1.18.0 (Ubuntu)
       Date:
-      - Mon, 26 Sep 2022 16:24:24 GMT
+      - Mon, 26 Sep 2022 16:23:42 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -188,7 +188,7 @@ http_interactions:
       Access-Control-Max-Age:
       - '86400'
       X-Ol-Stats:
-      - '"SR 1 0.036 TT 0 0.037"'
+      - '"SR 1 3.283 TT 0 3.287"'
       Referrer-Policy:
       - no-referrer-when-downgrade
     body:
@@ -481,11 +481,431 @@ http_interactions:
                     "author_facet": [
                         "OL3010394A College Prowler"
                     ]
+                },
+                {
+                    "key": "/works/OL16800110W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL25422192M",
+                        "/works/OL16800110W",
+                        "/subjects/hfb",
+                        "/subjects/hfbco",
+                        "/subjects/hfbcolo",
+                        "/subjects/colorado_marriage_records",
+                        "/subjects/co_marriage_records",
+                        "/subjects/colo_marriage_records",
+                        "/subjects/colorado_genealogy",
+                        "/subjects/co_genealogy",
+                        "/subjects/colo_genealogy",
+                        "/subjects/colorado_marriages",
+                        "/subjects/co_marriages",
+                        "/subjects/colo_marriages",
+                        "/subjects/colorado_vital_records",
+                        "/subjects/co_vital_records",
+                        "/subjects/colo_vital_records",
+                        "/subjects/colorado_vitals",
+                        "/subjects/co_vitals",
+                        "/subjects/colo_vitals",
+                        "/subjects/co_archives",
+                        "/subjects/western_heritage",
+                        "/subjects/colorado_ancestry",
+                        "/subjects/co_ancestry",
+                        "/subjects/colorado_archives",
+                        "/subjects/marriage_records_of_colorado",
+                        "/subjects/marriage_records_of_co",
+                        "/subjects/colorado_grooms",
+                        "/subjects/colorado_brides",
+                        "/subjects/co_grooms",
+                        "/subjects/co_brides",
+                        "/subjects/genealogy",
+                        "/subjects/colorado_marriage_licenses",
+                        "/subjects/co_marriage_licenses",
+                        "/subjects/colorado_marriage_sources",
+                        "/subjects/co_marriage_sources",
+                        "/subjects/colorado_marriage_bonds",
+                        "/subjects/co_marriage_bonds",
+                        "/subjects/place:hfbcodenv",
+                        "/subjects/place:denver_county_colorado",
+                        "/subjects/place:denver_county",
+                        "/subjects/place:denver",
+                        "/subjects/place:denver_co",
+                        "/subjects/place:co",
+                        "/subjects/place:denver_county_co",
+                        "/subjects/place:denver_co_co_marr",
+                        "/subjects/place:denver_marriages",
+                        "/subjects/place:denver_county_colo",
+                        "/subjects/place:denver_co_colo",
+                        "/subjects/place:denver_county_marriage_records",
+                        "/subjects/place:denver_co_marriage_records",
+                        "/subjects/place:denver_co_marriages",
+                        "/subjects/place:denver_co_vital_records",
+                        "/subjects/place:denver_co_vitals",
+                        "/subjects/place:denver_county_(colo.)",
+                        "/subjects/time:1873-1939",
+                        "/subjects/time:1700s",
+                        "/subjects/time:1800s",
+                        "/subjects/time:19th_century",
+                        "/subjects/time:pre_1900",
+                        "/subjects/time:early",
+                        "/subjects/time:pre_modern",
+                        "/subjects/time:early_nineteenth_century_and_early_twentieth_century",
+                        "/authors/OL7168194A",
+                        "/authors/OL7168201A"
+                    ],
+                    "title": "Denver County Colorado Marriage Index 1873-1939",
+                    "title_suggest": "Denver County Colorado Marriage Index 1873-1939",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL25422192M"
+                    ],
+                    "publish_date": [
+                        "2013"
+                    ],
+                    "publish_year": [
+                        2013
+                    ],
+                    "first_publish_year": 2013,
+                    "number_of_pages_median": 27,
+                    "publish_place": [
+                        "3878 W 3200 S, Salt Lake City, UT 84120-2154 USA  ph.801-966-1611  huntingforbears@yahoo.com"
+                    ],
+                    "last_modified_i": 1513747688,
+                    "ebook_count_i": 0,
+                    "ebook_access": "no_ebook",
+                    "has_fulltext": false,
+                    "public_scan_b": false,
+                    "cover_edition_key": "OL25422192M",
+                    "cover_i": 7250387,
+                    "publisher": [
+                        "Hunting For Bears Genealogical Society and Library"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL7168194A",
+                        "OL7168201A"
+                    ],
+                    "author_name": [
+                        "Patrick Vernon Murray",
+                        "Dixie Owens Murray"
+                    ],
+                    "place": [
+                        "hfbcodenv",
+                        "Denver County Colorado",
+                        "Denver County",
+                        "Denver",
+                        "Denver Co",
+                        "CO",
+                        "Denver County CO",
+                        "Denver Co CO Marr",
+                        "Denver Marriages",
+                        "Denver County Colo",
+                        "Denver Co Colo",
+                        "Denver County Marriage Records",
+                        "Denver Co Marriage Records",
+                        "Denver CO Marriages",
+                        "Denver CO vital records",
+                        "Denver CO vitals",
+                        "Denver County (Colo.)"
+                    ],
+                    "subject": [
+                        "hfb",
+                        "hfbco",
+                        "hfbcolo",
+                        "Colorado Marriage Records",
+                        "CO Marriage Records",
+                        "Colo Marriage Records",
+                        "Colorado Genealogy",
+                        "CO Genealogy",
+                        "Colo Genealogy",
+                        "Colorado Marriages",
+                        "CO Marriages",
+                        "Colo Marriages",
+                        "Colorado vital records",
+                        "CO vital records",
+                        "Colo vital records",
+                        "Colorado vitals",
+                        "CO vitals",
+                        "Colo vitals",
+                        "CO Archives",
+                        "Western Heritage",
+                        "Colorado Ancestry",
+                        "CO Ancestry",
+                        "Colorado Archives",
+                        "Marriage Records of Colorado",
+                        "Marriage Records of CO",
+                        "Colorado Grooms",
+                        "Colorado Brides",
+                        "CO Grooms",
+                        "CO Brides",
+                        "Genealogy",
+                        "Colorado Marriage licenses",
+                        "CO Marriage licenses",
+                        "Colorado Marriage Sources",
+                        "CO Marriage Sources",
+                        "Colorado Marriage bonds",
+                        "CO Marriage bonds"
+                    ],
+                    "time": [
+                        "1873-1939",
+                        "1700s",
+                        "1800s",
+                        "19th Century",
+                        "pre 1900",
+                        "Early",
+                        "pre modern",
+                        "Early Nineteenth Century and Early Twentieth Century"
+                    ],
+                    "publisher_facet": [
+                        "Hunting For Bears Genealogical Society and Library"
+                    ],
+                    "place_key": [
+                        "co",
+                        "denver",
+                        "denver_co",
+                        "denver_co_co_marr",
+                        "denver_co_colo",
+                        "denver_co_marriage_records",
+                        "denver_co_marriages",
+                        "denver_co_vital_records",
+                        "denver_co_vitals",
+                        "denver_county",
+                        "denver_county_(colo.)",
+                        "denver_county_co",
+                        "denver_county_colo",
+                        "denver_county_colorado",
+                        "denver_county_marriage_records",
+                        "denver_marriages",
+                        "hfbcodenv"
+                    ],
+                    "time_facet": [
+                        "1700s",
+                        "1800s",
+                        "1873-1939",
+                        "19th Century",
+                        "Early",
+                        "Early Nineteenth Century and Early Twentieth Century",
+                        "pre 1900",
+                        "pre modern"
+                    ],
+                    "subject_facet": [
+                        "CO Ancestry",
+                        "CO Archives",
+                        "CO Brides",
+                        "CO Genealogy",
+                        "CO Grooms",
+                        "CO Marriage Records",
+                        "CO Marriage Sources",
+                        "CO Marriage bonds",
+                        "CO Marriage licenses",
+                        "CO Marriages",
+                        "CO vital records",
+                        "CO vitals",
+                        "Colo Genealogy",
+                        "Colo Marriage Records",
+                        "Colo Marriages",
+                        "Colo vital records",
+                        "Colo vitals",
+                        "Colorado Ancestry",
+                        "Colorado Archives",
+                        "Colorado Brides",
+                        "Colorado Genealogy",
+                        "Colorado Grooms",
+                        "Colorado Marriage Records",
+                        "Colorado Marriage Sources",
+                        "Colorado Marriage bonds",
+                        "Colorado Marriage licenses",
+                        "Colorado Marriages",
+                        "Colorado vital records",
+                        "Colorado vitals",
+                        "Genealogy",
+                        "Marriage Records of CO",
+                        "Marriage Records of Colorado",
+                        "Western Heritage",
+                        "hfb",
+                        "hfbco",
+                        "hfbcolo"
+                    ],
+                    "_version_": 1735657165148913666,
+                    "place_facet": [
+                        "CO",
+                        "Denver",
+                        "Denver CO Marriages",
+                        "Denver CO vital records",
+                        "Denver CO vitals",
+                        "Denver Co",
+                        "Denver Co CO Marr",
+                        "Denver Co Colo",
+                        "Denver Co Marriage Records",
+                        "Denver County",
+                        "Denver County (Colo.)",
+                        "Denver County CO",
+                        "Denver County Colo",
+                        "Denver County Colorado",
+                        "Denver County Marriage Records",
+                        "Denver Marriages",
+                        "hfbcodenv"
+                    ],
+                    "author_facet": [
+                        "OL7168194A Patrick Vernon Murray",
+                        "OL7168201A Dixie Owens Murray"
+                    ],
+                    "subject_key": [
+                        "co_ancestry",
+                        "co_archives",
+                        "co_brides",
+                        "co_genealogy",
+                        "co_grooms",
+                        "co_marriage_bonds",
+                        "co_marriage_licenses",
+                        "co_marriage_records",
+                        "co_marriage_sources",
+                        "co_marriages",
+                        "co_vital_records",
+                        "co_vitals",
+                        "colo_genealogy",
+                        "colo_marriage_records",
+                        "colo_marriages",
+                        "colo_vital_records",
+                        "colo_vitals",
+                        "colorado_ancestry",
+                        "colorado_archives",
+                        "colorado_brides",
+                        "colorado_genealogy",
+                        "colorado_grooms",
+                        "colorado_marriage_bonds",
+                        "colorado_marriage_licenses",
+                        "colorado_marriage_records",
+                        "colorado_marriage_sources",
+                        "colorado_marriages",
+                        "colorado_vital_records",
+                        "colorado_vitals",
+                        "genealogy",
+                        "hfb",
+                        "hfbco",
+                        "hfbcolo",
+                        "marriage_records_of_co",
+                        "marriage_records_of_colorado",
+                        "western_heritage"
+                    ],
+                    "time_key": [
+                        "1700s",
+                        "1800s",
+                        "1873-1939",
+                        "19th_century",
+                        "early",
+                        "early_nineteenth_century_and_early_twentieth_century",
+                        "pre_1900",
+                        "pre_modern"
+                    ]
+                },
+                {
+                    "key": "/works/OL10910782M",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL10910782M",
+                        "/works/OL10910782M"
+                    ],
+                    "title": "Denver, Co Vicinity (City Wall Maps)",
+                    "title_suggest": "Denver, Co Vicinity (City Wall Maps)",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL10910782M"
+                    ],
+                    "publish_date": [
+                        "January 2001"
+                    ],
+                    "publish_year": [
+                        2001
+                    ],
+                    "first_publish_year": 2001,
+                    "isbn": [
+                        "0762538627",
+                        "9780762538621"
+                    ],
+                    "last_modified_i": 1655272482,
+                    "ebook_count_i": 0,
+                    "ebook_access": "no_ebook",
+                    "has_fulltext": false,
+                    "public_scan_b": false,
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "publisher_facet": [
+                        "Universal Map Enterprises"
+                    ],
+                    "_version_": 1735678998732603392
+                },
+                {
+                    "key": "/works/OL8415118W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL7900786M",
+                        "/works/OL8415118W",
+                        "/authors/OL2806763A"
+                    ],
+                    "title": "Five Points Neighborhood of Denver  (CO)",
+                    "title_suggest": "Five Points Neighborhood of Denver  (CO)",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL7900786M"
+                    ],
+                    "publish_date": [
+                        "June 11, 2001"
+                    ],
+                    "publish_year": [
+                        2001
+                    ],
+                    "first_publish_year": 2001,
+                    "number_of_pages_median": 128,
+                    "oclc": [
+                        "47691535"
+                    ],
+                    "isbn": [
+                        "0738518700",
+                        "9780738518701"
+                    ],
+                    "last_modified_i": 1303742645,
+                    "ebook_count_i": 0,
+                    "ebook_access": "no_ebook",
+                    "has_fulltext": false,
+                    "public_scan_b": false,
+                    "cover_edition_key": "OL7900786M",
+                    "cover_i": 1371298,
+                    "first_sentence": [
+                        "After the Civil War, freed slaves came west from the south looking for work."
+                    ],
+                    "publisher": [
+                        "Arcadia  Publishing (SC)"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL2806763A"
+                    ],
+                    "author_name": [
+                        "Laura M. Mauck"
+                    ],
+                    "id_librarything": [
+                        "3305602"
+                    ],
+                    "publisher_facet": [
+                        "Arcadia  Publishing (SC)"
+                    ],
+                    "_version_": 1735676935354187777,
+                    "author_facet": [
+                        "OL2806763A Laura M. Mauck"
+                    ]
                 }
             ],
             "num_found": 679,
-            "q": "Denver, CO",
+            "q": "denver, co",
             "offset": null
         }
-  recorded_at: Mon, 26 Sep 2022 16:24:24 GMT
+  recorded_at: Mon, 26 Sep 2022 16:23:43 GMT
 recorded_with: VCR 6.1.0
