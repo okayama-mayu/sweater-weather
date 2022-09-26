@@ -10,7 +10,7 @@ RSpec.describe 'Book CRUD' do
 
       headers = {"CONTENT_TYPE" => "application/json"}
       
-      post "/api/v1/book", headers: headers, params: JSON.generate(body)
+      post "/api/v1/books", headers: headers, params: JSON.generate(body)
 
       expect(response).to be_successful
       expect(response).to have_http_status 200
