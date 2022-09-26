@@ -3,14 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Book CRUD' do 
   describe 'create Book' do 
     it 'creates a Book given location and quantity', :vcr do 
-      body = ({
-        "location": "Denver, CO", 
-        "quantity": 5 
-      })
-
-      headers = {"CONTENT_TYPE" => "application/json"}
-      
-      post "/api/v1/book-search", headers: headers, params: JSON.generate(body)
+      get "/api/v1/book-search?location=denver,co&quantity=5"
 
       expect(response).to be_successful
       expect(response).to have_http_status 200
@@ -24,7 +17,7 @@ RSpec.describe 'Book CRUD' do
       expect(books[:type]).to eq "book"
 
       expect(books[:attributes]).to have_key(:destination)
-      expect(books[:attributes][:destination]).to eq "Denver, CO"
+      expect(books[:attributes][:destination]).to eq "denver,co"
 
       expect(books[:attributes][:forecast][:summary]).to be_a String
       expect(books[:attributes][:forecast][:temperature]).to be_a String

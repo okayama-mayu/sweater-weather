@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
       resources :road_trip, only: [:create]
 
-      post '/book-search', to: 'books#create'
+      get '/book-search', to: 'books#create'
     end
   end
 end
