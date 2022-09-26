@@ -6,4 +6,10 @@ RSpec.describe 'WeatherSearchFacade' do
 
     expect(forecast).to be_a Forecast
   end
+
+  it 'returns a Roadtrip object', :vcr do 
+    roadtrip = WeatherSearchFacade.road_trip_search('denver, co', 'estes park, co')
+    
+    expect(roadtrip).to be_a Roadtrip 
+  end
 end
