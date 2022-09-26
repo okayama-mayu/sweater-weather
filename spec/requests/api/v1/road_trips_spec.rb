@@ -39,7 +39,7 @@ RSpec.describe 'Roadtrip CRUD' do
       expect(response.body).to include('conditions')
     end
 
-    it 'creates a Roadtrip for trips over 48 hours', :vcr do 
+    it 'creates a Roadtrip for trips lasting over 40 hours', :vcr do 
       api_key = User.find_by!(email: "whatever@example.com").api_key
 
       body = ({
@@ -64,6 +64,33 @@ RSpec.describe 'Roadtrip CRUD' do
       expect(response.body).to include('temperature')
       expect(response.body).to include('conditions')
     end
+
+    it 'creates a Roadtrip for trips lasting over 2 days or 48 hours', :vcr do 
+      api_key = User.find_by!(email: "whatever@example.com").api_key
+
+      body = ({
+        "origin": "New York, NY", 
+        "destination": "Panama City, Panama", 
+        "api_key": api_key
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      post "/api/v1/road_trip", headers: headers, params: JSON.generate(body)
+
+      expect(response).to be_successful
+      expect(response).to have_http_status(200)
+
+      expect(response.body).to include('roadtrip')
+      expect(response.body).to include('New York, NY')
+      expect(response.body).to include('Panama City, Panama')
+      expect(response.body).to include('travel_time')
+      expect(response.body).to include('80 hours 04 minutes')
+      expect(response.body).to include('weather_at_eta')
+      expect(response.body).to include('temperature')
+      expect(response.body).to include('conditions')
+    end
+
 
     it 'returns an error if no api key'
 
