@@ -2,7 +2,7 @@ class Book
   attr_reader :id, :destination, :forecast, :total_books_found, :books 
 
   def initialize(location, weather_data, books_data)
-    @id = nil 
+    @id = "null" 
     @destination = location 
     @forecast = pull_weather(weather_data)
     @total_books_found = books_data[:numFound]

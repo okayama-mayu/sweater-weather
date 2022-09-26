@@ -12,7 +12,7 @@ RSpec.describe Book do
     books = Book.new(location, weather_data, book_data)
 
     expect(books).to be_a Book 
-    expect(books.id).to eq nil 
+    expect(books.id).to eq 'null' 
     expect(books.destination).to eq location 
 
     expect(books.forecast[:summary]).to be_a String 

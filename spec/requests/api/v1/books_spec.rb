@@ -11,7 +11,7 @@ RSpec.describe 'Book CRUD' do
       books = JSON.parse(response.body, symbolize_names: true)[:data]
 
       expect(books).to have_key(:id)
-      expect(books[:id]).to eq nil
+      expect(books[:id]).to eq 'null'
 
       expect(books).to have_key(:type)
       expect(books[:type]).to eq "book"
