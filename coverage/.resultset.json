@@ -1,143 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/api/v1/books_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/concerns/response.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/concerns/exception_handler.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/facades/weather_search_facade.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/location_service.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/location.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/weather_service.rb": {
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/book_service.rb": {
         "lines": [
           1,
           1,
@@ -148,66 +12,10 @@
           1,
           1,
           1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/forecast.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           1,
           1,
-          null,
-          5,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          8,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ]
@@ -229,6 +37,110 @@
           null,
           0,
           null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/facades/weather_search_facade.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/location.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/poros/forecast.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -308,6 +220,20 @@
         "branches": {
         }
       },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/api/v1/road_trip_controller.rb": {
         "lines": [
           0,
@@ -381,7 +307,7 @@
         "branches": {
         }
       },
-      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/book_service.rb": {
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/api/v1/books_controller.rb": {
         "lines": [
           0,
           0,
@@ -391,7 +317,102 @@
           null,
           0,
           0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/concerns/exception_handler.rb": {
+        "lines": [
+          0,
+          0,
           null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/controllers/concerns/response.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/location_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/mayutakeda/turing/3mod/projects/sweater-weather/app/services/weather_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
           0,
           0
         ],
@@ -399,6 +420,6 @@
         }
       }
     },
-    "timestamp": 1664206760
+    "timestamp": 1664207607
   }
 }
