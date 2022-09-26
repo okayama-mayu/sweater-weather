@@ -16,22 +16,42 @@ class Roadtrip
   def find_weather(weather_data, time_lapsed) 
     eta = find_eta(weather_data, time_lapsed)
 
-    data = weather_data[:hourly].find { |hour| hour[:dt] == eta }
+    data = pull_data(weather_data, eta, time_lapsed)
 
-    {
-      :temperature => data[:temp], 
-      :conditions => data[:weather][0][:description]
-    }
+    create_hash(data, time_lapsed)
   end
 
   def find_eta(weather_data, time_lapsed)
     current_unix_time = weather_data[:current][:dt]
+
     if time_lapsed <= 172800 
       times = weather_data[:hourly].map { |hour| hour[:dt] }
-      times.min_by { |time| (current_unix_time + time_lapsed - time).abs }
     else 
       times = weather_data[:daily].map { |day| day[:dt] }
-      binding.pry 
+    end 
+    
+    times.min_by { |time| (current_unix_time + time_lapsed - time).abs }
+  end
+
+  def pull_data(weather_data, eta, time_lapsed)
+    if time_lapsed <= 172800 
+      data = weather_data[:hourly].find { |hour| hour[:dt] == eta }
+    else 
+      data = weather_data[:daily].find { |day| day[:dt] == eta }
+    end 
+  end
+
+  def create_hash(data, time_lapsed)
+    if time_lapsed <= 172800 
+      {
+        :temperature => data[:temp], 
+        :conditions => data[:weather][0][:description]
+      }
+    else 
+      {
+        :temperature => data[:temp][:day], 
+        :conditions => data[:weather][0][:description]
+      }
     end 
   end
 end
