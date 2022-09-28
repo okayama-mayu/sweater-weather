@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true 
 
   has_secure_password
+  has_secure_token
 
   def api_key
     password_digest
