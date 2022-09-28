@@ -15,7 +15,7 @@ RSpec.describe 'Roadtrip CRUD' do
 
   describe 'create Roadtrip' do 
     it 'creates a Roadtrip given origin, destination, and api_key', :vcr do 
-      api_key = User.find_by!(email: "whatever@example.com").api_key
+      api_key = User.find_by!(email: "whatever@example.com").token
 
       body = ({
         "origin": "Denver, CO", 
