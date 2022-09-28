@@ -30,7 +30,7 @@ RSpec.describe 'Session CRUD' do
       expect(response).to have_http_status(200)
 
       expect(response.body).to include("whatever@example.com")
-      expect(response.body).to include(user.password_digest)
+      expect(response.body).to include(user.token)
       expect(user.email).to eq "whatever@example.com"
     end
 

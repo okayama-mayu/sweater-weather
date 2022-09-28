@@ -6,6 +6,9 @@ class Forecast
     @current_weather = current(data)
     @daily_weather = daily(data)
     @hourly_weather = hourly(data)
+    # refactor: create a poro for each: current_weather, daily_weather, hourly_weather
+    # further encapsulation; easier to read/navigate; easier to grab specific data within curent_weather using dot syntax via attr_reader
+    # scalability and encapsulation -- easier if own poro 
   end
 
   def current(data)

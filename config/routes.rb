@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       resources :sessions, only: [:create]
 
       resources :road_trip, only: [:create]
+
+      get '/book-search', to: 'books#create'
     end
   end
 end

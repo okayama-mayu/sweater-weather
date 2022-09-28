@@ -12,4 +12,10 @@ RSpec.describe 'WeatherSearchFacade' do
     
     expect(roadtrip).to be_a Roadtrip 
   end
+
+  it 'returns a Book object', :vcr do 
+    books = WeatherSearchFacade.book_search('denver, co', 8)
+
+    expect(books).to be_a Book 
+  end
 end

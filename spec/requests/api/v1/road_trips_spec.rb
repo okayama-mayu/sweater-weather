@@ -15,7 +15,7 @@ RSpec.describe 'Roadtrip CRUD' do
 
   describe 'create Roadtrip' do 
     it 'creates a Roadtrip given origin, destination, and api_key', :vcr do 
-      api_key = User.find_by!(email: "whatever@example.com").api_key
+      api_key = User.find_by!(email: "whatever@example.com").token
 
       body = ({
         "origin": "Denver, CO", 
@@ -40,7 +40,7 @@ RSpec.describe 'Roadtrip CRUD' do
     end
 
     it 'creates a Roadtrip for trips lasting over 40 hours', :vcr do 
-      api_key = User.find_by!(email: "whatever@example.com").api_key
+      api_key = User.find_by!(email: "whatever@example.com").token
 
       body = ({
         "origin": "New York, NY", 
@@ -66,7 +66,7 @@ RSpec.describe 'Roadtrip CRUD' do
     end
 
     it 'creates a Roadtrip for trips lasting over 2 days or 48 hours', :vcr do 
-      api_key = User.find_by!(email: "whatever@example.com").api_key
+      api_key = User.find_by!(email: "whatever@example.com").token
 
       body = ({
         "origin": "New York, NY", 
@@ -92,7 +92,7 @@ RSpec.describe 'Roadtrip CRUD' do
     end
 
     it 'returns an empty weather block and travel time of impossible if travelling from NYC to London', :vcr do 
-      api_key = User.find_by!(email: "whatever@example.com").api_key
+      api_key = User.find_by!(email: "whatever@example.com").token
 
       body = ({
         "origin": "New York, NY", 
