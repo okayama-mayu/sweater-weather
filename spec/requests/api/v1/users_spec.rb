@@ -19,7 +19,7 @@ RSpec.describe 'User CRUD' do
       expect(response).to have_http_status(201)
 
       expect(response.body).to include("whatever@example.com")
-      expect(response.body).to include(created_user.password_digest)
+      expect(response.body).to include(created_user.token)
       expect(created_user.email).to eq user_params[:email]
     end
 
