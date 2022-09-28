@@ -1,4 +1,7 @@
 class WeatherSearchFacade 
+  # one facade per controller (differing opinions!)
+  # 'WeatherSearchFacade' should only look for weather stuff; single responsibility principle!
+  # can call on other facades from another facade 
   def self.weather_search(location)
     # location_data = LocationService.search_location(location)
     # coordinates = Location.new(location_data)
